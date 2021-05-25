@@ -1,0 +1,63 @@
+<h1>Hello Product Admin</h1>
+
+<div class="row" style="margin-top: 20px;">
+  <div class="col-sm-9">
+    <h4>List of Inventory Items</h4>
+  </div>
+  <div class="col-sm-3">
+    <button type="button" class="btn btn-success" (click)="addInventoryItem()">Add Product</button>&nbsp;
+    <!--<button type="button" class="btn btn-primary" [disabled]="isDisableButton" (click)="editInventoryItem()">Edit Product</button>&nbsp;
+    <button type="button" class="btn btn-danger" [disabled]="isDisableButton" (click)="deleteInventoryItem()">Delete Product</button>&nbsp;-->
+  </div>
+</div>
+
+<div class="row content" style="margin-top: 20px;">
+  <div class="col-sm-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Price</th>
+          <th scope="col">Category</th>
+          <th scope="col">Actions</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of inventoryItemsList;">
+
+          <td>{{ data.id }}</td>
+          <td>{{ data.name }}</td>
+          <td>{{ data.description }}</td>
+          <td>{{ data.price }}</td>
+          <td>{{ data.category }}</td>
+          <td>
+            <button type="button" class="btn btn-primary" (click)="editInventoryItem(data)">Edit </button>&nbsp;
+            <button type="button" class="btn btn-danger" (click)="openDialog(data)">Delete </button>
+          </td>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!--<tbody>
+  <tr *ngFor="let data of inventoryItemsList; let i=index;
+            let even=even"
+      [style.background-color]="rowClicked == data.id ? 'rgb(8,57,71)' : ('' ? '' : '')"
+      [style.color]="rowClicked == data.id ? 'white' : ('' ? '' : '')" (click)="selectedRow(data)"
+      (dblclick)="editInventoryItem()">
+
+    <td>{{ data.id }}</td>
+    <td>{{ data.name }}</td>
+    <td>{{ data.description }}</td>
+    <td>{{ data.price }}</td>
+    <td>{{ data.category }}</td>
+    <td>
+      <button type="button" class="btn btn-primary" (click)="editInventoryItem()">Edit </button>&nbsp;
+      <button type="button" class="btn btn-danger" (click)="deleteInventoryItem()">Delete </button>
+    </td>
+</tbody>-->
+

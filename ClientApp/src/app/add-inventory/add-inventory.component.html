@@ -1,0 +1,42 @@
+<form>
+  <div class="form-group name">
+    <input type="text"
+           class="form-control nameInput"
+           id="name"
+           name="name"
+           [(ngModel)]="model.name"
+           placeholder="Name">
+  </div>
+
+  <div class="form-group description">
+    <input type="text"
+           class="form-control descriptionInput"
+           id="description"
+           name="description"
+           [(ngModel)]="model.description"
+           placeholder="Description">
+  </div>
+  <div class="form-group price">
+    <input type="text"
+           class="form-control priceInput"
+           id="price"
+           name="price"
+           [(ngModel)]="model.price"
+           placeholder="Price">
+  </div>
+  <div class="form-group category">
+    <input type="text"
+           class="form-control categoryInput"
+           id="category"
+           name="category"
+           [(ngModel)]="model.category"
+           placeholder="Category">
+  </div>
+  <div class="submitBtnContainer">
+    <button *ngIf="!isUpdateButton" type="button" class="btn btn-success" (click)="saveInventoryItem()">Save</button> &nbsp;
+
+    <button *ngIf="isUpdateButton" type="button" class="btn btn-success" (click)="saveInventoryItem()">Update</button> &nbsp;
+
+    <button type="button" class="btn btn-danger" (click)="closeInventoryDialog()">Close</button>
+  </div>
+</form>
