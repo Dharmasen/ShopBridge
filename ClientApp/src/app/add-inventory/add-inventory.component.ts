@@ -35,6 +35,12 @@ export class AddInventoryComponent implements OnInit {
   }
 
   saveInventoryItem() {
+    if (this.model.name === undefined || this.model.price === undefined || this.model.description === undefined || this.model.category === undefined) {
+      this.snackBar.open('Please enter item details', '', {
+        duration: 2000,
+      });
+    }
+    else{    
     const saveRequest: InventoryModel = {
       id: this.model.id,
       name: this.model.name,
@@ -62,6 +68,7 @@ export class AddInventoryComponent implements OnInit {
           console.error(error);
         });
     this.model = {};
+      }
   }
 
   closeInventoryDialog() {
