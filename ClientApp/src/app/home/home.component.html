@@ -6,8 +6,6 @@
   </div>
   <div class="col-sm-3">
     <button type="button" class="btn btn-success" (click)="addInventoryItem()">Add Product</button>&nbsp;
-    <!--<button type="button" class="btn btn-primary" [disabled]="isDisableButton" (click)="editInventoryItem()">Edit Product</button>&nbsp;
-    <button type="button" class="btn btn-danger" [disabled]="isDisableButton" (click)="deleteInventoryItem()">Delete Product</button>&nbsp;-->
   </div>
 </div>
 
@@ -41,23 +39,3 @@
     </table>
   </div>
 </div>
-
-
-<!--<tbody>
-  <tr *ngFor="let data of inventoryItemsList; let i=index;
-            let even=even"
-      [style.background-color]="rowClicked == data.id ? 'rgb(8,57,71)' : ('' ? '' : '')"
-      [style.color]="rowClicked == data.id ? 'white' : ('' ? '' : '')" (click)="selectedRow(data)"
-      (dblclick)="editInventoryItem()">
-
-    <td>{{ data.id }}</td>
-    <td>{{ data.name }}</td>
-    <td>{{ data.description }}</td>
-    <td>{{ data.price }}</td>
-    <td>{{ data.category }}</td>
-    <td>
-      <button type="button" class="btn btn-primary" (click)="editInventoryItem()">Edit </button>&nbsp;
-      <button type="button" class="btn btn-danger" (click)="deleteInventoryItem()">Delete </button>
-    </td>
-</tbody>-->
-
