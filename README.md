@@ -6,7 +6,7 @@ For Database configuration please follow below steps.
 1. Create ShopBridge Database
 below script for create DB.
 
-/****** Object:  Database [ShopBridge]    Script Date: 5/25/2021 10:18:36 PM ******/
+
 CREATE DATABASE [ShopBridge]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -122,7 +122,7 @@ please run below script to create table.
 USE [ShopBridge]
 GO
 
-/****** Object:  Table [dbo].[InventoryItems]    Script Date: 5/25/2021 10:19:23 PM ******/
+
 SET ANSI_NULLS ON
 GO
 
